@@ -1,0 +1,12 @@
+title: Slack Conversation Export Display
+
+# Build settings
+markdown: kramdown
+
+exclude:
+  - README.md
+  - .DS_Store
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - .idea
