@@ -2,3 +2,7 @@ _site
 .sass-cache
 .jekyll-metadata
 .idea
+
+# This is because we don't want to version specific data
+_data
+!_data/README.md

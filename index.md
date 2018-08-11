@@ -2,4 +2,4 @@
 layout: default
 ---
 
-This is content
+Click [users]({{ site.baseurl }}/users) for the users list.
