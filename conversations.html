@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<h1 class="ui header">Conversations</h1>
+
+<div class="ui very relaxed list">
+
+    {% for conversation in site.data.conversations %}
+    <div class="item">
+        <div class="content">
+            <div class="header">
+                {% if conversation.is_channel %}
+                    <i class="hashtag icon"></i>
+                    <a href="{{ site.basurl }}/conversation/{{ conversation.id }}">{{ conversation.name }}</a>
+                {% elsif conversation.is_group %}
+                    <i class="users icon"></i>
+                    <a href="{{ site.basurl }}/conversation/{{ conversation.id }}">{{ conversation.purpose.value }}</a>
+                {% elsif conversation.is_im %}
+                    {% assign user = site.data.users | where: "id", conversation.user | first %}
+                    <i class="user icon"></i>
+                    <a href="{{ site.basurl }}/conversation/{{ conversation.id }}">
+                        Private message with: {% include user-display-name.html user=user %}
+                    </a>
+                {% endif %}
+                
+                
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}
+
+</div>

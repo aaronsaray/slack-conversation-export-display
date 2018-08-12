@@ -1,0 +1,5 @@
+{% if user.profile.display_name != "" %}
+    {{ user.profile.display_name }} ({{ user.profile.real_name }})
+{% else %}
+    {{user.profile.real_name}}
+{% endif %}

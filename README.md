@@ -17,3 +17,7 @@ Then,
 `bundle exec jekyll serve`
 
 This is a work in progress.  
+
+## Todo
+
+- [ ] Make individual conversation pages work (use collections? or something else?)
