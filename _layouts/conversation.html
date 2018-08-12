@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<h1 class="ui header">Conversation</h1>
+
+<div class="ui very relaxed list">
+{% for conversation in site.data[page.id] %}
+    <div class="item">
+        {% assign user = site.data.users | where: "id", conversation.user | first %}
+        {% include user-avatar.html user=user %}
+        <div class="content">
+            <div class="header">{% include user-display-name.html user=user %}</div>
+            <div class="description">
+                {{conversation.text}}
+            </div>
+        </div>
+    </div>
+{% endfor %}}
+</div>

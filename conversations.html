@@ -9,25 +9,22 @@ layout: default
     <div class="item">
         <div class="content">
             <div class="header">
+                {% assign id = conversation.id | downcase | append: '.html' %}
                 {% if conversation.is_channel %}
                     <i class="hashtag icon"></i>
-                    <a href="{{ site.basurl }}/conversation/{{ conversation.id }}">{{ conversation.name }}</a>
+                    <a href="{{ site.basurl }}/conversation/{{ id }}">{{ conversation.name }}</a>
                 {% elsif conversation.is_group %}
                     <i class="users icon"></i>
                     <a href="{{ site.basurl }}/conversation/{{ conversation.id }}">{{ conversation.purpose.value }}</a>
                 {% elsif conversation.is_im %}
                     {% assign user = site.data.users | where: "id", conversation.user | first %}
                     <i class="user icon"></i>
-                    <a href="{{ site.basurl }}/conversation/{{ conversation.id }}">
+                    <a href="{{ site.basurl }}/conversation/{{ conversation.id | downcase }}.html">
                         Private message with: {% include user-display-name.html user=user %}
                     </a>
                 {% endif %}
-                
-                
             </div>
         </div>
     </div>
-
     {% endfor %}
-
 </div>

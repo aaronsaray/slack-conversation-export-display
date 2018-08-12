@@ -11,3 +11,10 @@ exclude:
   - Gemfile.lock
   - .idea
   - .gitignore
+  
+# from https://github.com/avillafiorita/jekyll-datapage_gen
+page_gen:
+  - data: "conversations"
+    template: "conversation"
+    name: "id"
+    dir: "conversation"

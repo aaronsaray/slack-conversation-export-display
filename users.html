@@ -6,7 +6,7 @@ layout: default
 <div class="ui very relaxed middle aligned list">
     {% for user in site.data.users %}
     <div class="item">
-        <img class="ui avatar image" src="{{ user.profile.image_32}}">
+        {% include user-avatar.html user=user %}
         <div class="content">
             <div class="header">
                 {% include user-display-name.html user=user %}
