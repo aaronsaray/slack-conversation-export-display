@@ -20,4 +20,6 @@ This is a work in progress.
 
 ## Todo
 
-- [ ] Make individual conversation pages work (use collections? or something else?)
+- [ ] Display attachments
+- [ ] Show timestamps
+- [ ] Have conversations list not wrap so hard when the line gets too long
