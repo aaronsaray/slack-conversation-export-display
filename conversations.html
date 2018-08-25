@@ -15,7 +15,7 @@ layout: default
                     <a href="{{ site.basurl }}/conversation/{{ id }}">{{ conversation.name }}</a>
                 {% elsif conversation.is_group %}
                     <i class="users icon"></i>
-                    <a href="{{ site.basurl }}/conversation/{{ conversation.id }}">{{ conversation.purpose.value }}</a>
+                    <a href="{{ site.basurl }}/conversation/{{ conversation.id | downcase }}.html">{{ conversation.purpose.value }}</a>
                 {% elsif conversation.is_im %}
                     {% assign user = site.data.users | where: "id", conversation.user | first %}
                     <i class="user icon"></i>
